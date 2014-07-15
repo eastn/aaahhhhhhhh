@@ -1,5 +1,14 @@
-#N canvas 916 68 450 300 10;
+#N canvas 757 181 484 347 10;
 #X obj 184 52 pink~;
-#X obj 158 130 output~;
-#X connect 0 0 1 0;
-#X connect 0 0 1 1;
+#X obj 157 124 output~;
+#X obj 184 85 bp~;
+#X floatatom 749 214 5 0 100 0 - - -;
+#X obj 749 244 tabread randomValues;
+#X msg 235 53 600;
+#X msg 273 68 3.14;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 5 0 2 1;
+#X connect 6 0 2 2;
