@@ -1,0 +1,5 @@
+#N canvas 916 68 450 300 10;
+#X obj 184 52 pink~;
+#X obj 158 130 output~;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
