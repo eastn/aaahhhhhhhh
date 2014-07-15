@@ -1,93 +1,98 @@
 #N canvas 592 27 810 846 10;
 #X declare -lib mrpeach;
-#X obj 198 194 pink~;
-#X obj 170 716 output~;
-#X obj 139 211 bp~;
-#X obj 139 236 bp~;
-#X obj 139 262 bp~;
-#X obj 24 -45 myOSC;
-#X obj 62 425 myReverb;
-#X obj 267 211 bp~;
-#X obj 267 236 bp~;
-#X obj 267 262 bp~;
-#X obj 139 359 *~;
-#X obj 139 393 *~;
-#X obj 166 393 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 183 41 pink~;
+#X obj 155 563 output~;
+#X obj 124 58 bp~;
+#X obj 124 83 bp~;
+#X obj 124 109 bp~;
+#X obj -330 -37 myOSC;
+#X obj 47 272 myReverb;
+#X obj 252 58 bp~;
+#X obj 252 83 bp~;
+#X obj 252 109 bp~;
+#X obj 124 206 *~;
+#X obj 124 240 *~;
+#X obj 151 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 267 392 *~;
-#X obj 294 393 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 252 239 *~;
+#X obj 279 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 267 359 *~;
-#X obj 308 324 knob 32 32 0 20 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 775 1;
-#X floatatom 308 367 5 0 0 0 - - -;
-#X obj 175 324 knob 32 32 0 20 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 775 1;
-#X floatatom 175 366 5 0 0 0 - - -;
-#X obj 331 288 loadbang;
-#X msg 274 305 5;
-#X obj 70 376 loadbang;
-#X obj 30 147 line 0 100;
-#X obj 30 98 pack f f;
-#X msg 30 123 list \$1 \$2;
-#X obj 30 53 r windSpeed;
-#X obj 75 74 r interval;
-#X obj 364 -68 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 364 -9 random 6;
-#X obj 364 17 / 6;
-#X obj 364 101 pack f f;
-#X obj 364 153 line 0 100;
-#X msg 364 126 list \$1 \$2;
-#X obj 438 0 r gust;
-#X obj 409 71 r gustInterval;
-#X obj 364 -39 metro 1000;
-#X obj 421 -72 r gustInterval;
-#X obj 364 72 + 3;
-#X obj 364 44 * 2;
-#X obj 170 550 lop~;
-#X obj 228 550 lop~;
-#X obj 271 535 hsl 128 15 0 4000 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 3700 1;
-#X obj 377 485 delwrite~ delLeft 4000;
-#X obj 527 485 delwrite~ delRight 4000;
-#X obj 253 632 sig~;
-#X floatatom 253 610 5 0 0 0 - - -;
-#X obj 253 658 vd~ delLeft;
-#X obj 327 649 vd~ delRight;
-#X obj 256 584 hsl 128 15 0 4000 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 2500 1;
-#X obj 12 634 sig~;
-#X floatatom 12 612 5 0 0 0 - - -;
-#X obj 12 660 vd~ delLeft;
-#X obj 86 651 vd~ delRight;
-#X obj 15 586 hsl 128 15 0 4000 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 3000 1;
-#X obj 622 206 tabread randomValues;
-#X obj 622 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 252 206 *~;
+#X obj 293 171 knob 32 32 0 20 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X floatatom 293 214 5 0 0 0 - - -;
+#X obj 160 171 knob 32 32 0 20 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X floatatom 160 213 5 0 0 0 - - -;
+#X obj 316 135 loadbang;
+#X msg 259 152 5;
+#X obj 55 223 loadbang;
+#X obj -327 199 line 0 100;
+#X obj -327 150 pack f f;
+#X msg -327 175 list \$1 \$2;
+#X obj -327 105 r windSpeed;
+#X obj -282 126 r interval;
+#X obj -175 -16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj -175 43 random 6;
+#X obj -175 69 / 6;
+#X obj -175 153 pack f f;
+#X obj -175 205 line 0 100;
+#X msg -175 178 list \$1 \$2;
+#X obj -101 52 r gust;
+#X obj -130 123 r gustInterval;
+#X obj -175 13 metro 1000;
+#X obj -118 -20 r gustInterval;
+#X obj -175 124 + 3;
+#X obj -175 96 * 2;
+#X obj 155 397 lop~;
+#X obj 213 397 lop~;
+#X obj 256 382 hsl 128 15 0 4000 0 0 empty empty empty -2 -8 0 10 -4032
+-1 -1 0 1;
+#X obj 362 332 delwrite~ delLeft 4000;
+#X obj 512 332 delwrite~ delRight 4000;
+#X obj 238 479 sig~;
+#X floatatom 238 457 5 0 0 0 - - -;
+#X obj 238 505 vd~ delLeft;
+#X obj 312 496 vd~ delRight;
+#X obj 241 431 hsl 128 15 0 4000 0 0 empty empty empty -2 -8 0 10 -257985
+-1 -1 0 1;
+#X obj -3 481 sig~;
+#X floatatom -3 459 5 0 0 0 - - -;
+#X obj -3 507 vd~ delLeft;
+#X obj 71 498 vd~ delRight;
+#X obj 0 433 hsl 128 15 0 4000 0 0 empty empty empty -2 -8 0 10 -257985
+-1 -1 0 1;
+#X obj 513 212 tabread randomValues;
+#X obj 513 113 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 622 152 f;
-#X obj 665 153 + 1;
-#X obj 622 179 mod 100;
-#X obj 622 127 metro 100;
-#X msg 676 29 50;
-#X msg 711 41 100;
-#X msg 736 66 150;
-#X msg 646 29 10;
-#X obj 715 169 + 10;
-#X obj 715 144 random 500;
-#X obj 364 177 spigot;
-#X obj 214 162 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 30 177 spigot;
-#X floatatom 30 208 5 0 0 0 - - -;
-#X floatatom 364 202 5 0 0 0 - - -;
-#X obj 104 164 s freq;
-#X obj 441 170 s gustQ;
-#X obj 194 220 r freq;
-#X obj 623 278 table randomValues;
-#X obj 176 250 r randomValQ;
-#X obj 622 241 s randValQ;
+#X obj 513 158 f;
+#X obj 556 159 + 1;
+#X obj 513 185 mod 100;
+#X obj 513 133 metro 100;
+#X msg 567 35 50;
+#X msg 602 47 100;
+#X msg 627 72 150;
+#X msg 537 35 10;
+#X obj 606 175 + 10;
+#X obj 606 150 random 500;
+#X obj -175 249 spigot;
+#X obj -203 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj -327 249 spigot;
+#X floatatom -327 280 5 0 0 0 - - -;
+#X floatatom -175 274 5 0 0 0 - - -;
+#X obj -255 216 s freq;
+#X obj -101 222 s gustQ;
+#X obj 179 67 r freq;
+#X obj 514 284 table randomValues;
+#X obj 161 97 r randomValQ;
+#X obj 513 247 s randValQ;
+#X obj 635 467 s~ sfr;
+#X obj 522 467 s~ sfl;
+#X obj 124 29 r~ sfl;
+#X obj 252 28 r~ sfr;
+#X obj 522 401 loadSoundFile;
 #X connect 0 0 2 0;
 #X connect 0 0 7 0;
 #X connect 2 0 3 0;
@@ -181,3 +186,7 @@
 #X connect 76 0 9 2;
 #X connect 76 0 8 2;
 #X connect 76 0 7 2;
+#X connect 80 0 2 0;
+#X connect 81 0 7 0;
+#X connect 82 0 79 0;
+#X connect 82 1 78 0;

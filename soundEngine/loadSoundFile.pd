@@ -1,0 +1,41 @@
+#N canvas 813 177 450 300 10;
+#X obj 158 55 openpanel;
+#X msg 158 154 open \$1;
+#X obj 158 187 readsf~;
+#X obj 5 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -4032 -1 -1
+;
+#X msg 224 170 1;
+#X msg 115 170 0;
+#X obj 279 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 158 82 symbol;
+#X obj 97 40 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 69 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X text 65 22 stop;
+#X text 91 22 loop;
+#X text 0 22 open;
+#X obj 38 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1 -1
+;
+#X text 30 22 start;
+#X obj 279 204 spigot;
+#X obj 133 228 outlet~;
+#X obj 186 228 outlet~;
+#X connect 0 0 7 1;
+#X connect 0 0 7 0;
+#X connect 1 0 2 0;
+#X connect 2 0 16 0;
+#X connect 2 0 17 0;
+#X connect 2 1 15 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 7 0 4 0;
+#X connect 8 0 15 1;
+#X connect 9 0 5 0;
+#X connect 13 0 7 0;
+#X connect 15 0 6 0;
+#X coords 0 -1 1 1 120 60 1 0 0;
