@@ -1,4 +1,5 @@
 #N canvas 757 181 484 347 10;
+#X declare -lib mrpeach;
 #X floatatom 749 214 5 0 100 0 - - -;
 #X obj 749 244 tabread randomValues;
 #X obj 212 3 pink~;
@@ -10,6 +11,7 @@
 #X floatatom 131 20 5 0 0 0 - - -;
 #X obj 259 -4 r gust;
 #X floatatom 259 20 5 0 0 0 - - -;
+#X obj 4 -65 myOSC;
 #X connect 0 0 1 0;
 #X connect 2 0 4 0;
 #X connect 4 0 5 0;
