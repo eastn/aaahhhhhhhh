@@ -1,19 +1,19 @@
 #N canvas 213 414 774 292 10;
 #X obj 232 122 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -4032
--1 -1 3132 1;
+-1 -1 3069 1;
 #X msg 337 176 wet \$1;
 #X obj 180 122 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -261682
--1 -1 768 1;
+-1 -1 831 1;
 #X obj 127 122 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 2100 1;
+-1 -1 3900 1;
 #X msg 256 176 dry \$1;
 #X msg 166 175 roomsize \$1;
 #X msg 87 176 damping \$1;
 #X msg 19 176 width \$1;
 #X obj 74 122 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 3900 1;
+-1 -1 2400 1;
 #X obj 22 122 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -159808
--1 -1 2600 1;
+-1 -1 3900 1;
 #X obj 258 60 r tempWet;
 #X obj 177 59 r tempDry;
 #X text 25 142 width;
@@ -49,9 +49,9 @@
 #X connect 10 0 0 0;
 #X connect 11 0 2 0;
 #X connect 17 0 25 0;
-#X connect 18 0 26 1;
+#X connect 18 0 25 1;
 #X connect 19 0 26 0;
-#X connect 20 0 25 1;
+#X connect 20 0 26 1;
 #X connect 25 0 21 0;
 #X connect 25 1 22 0;
 #X connect 26 0 23 0;
